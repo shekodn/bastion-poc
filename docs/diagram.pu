@@ -1,0 +1,21 @@
+@startuml
+
+left to right direction
+actor "On-call Engineer" as engineer
+
+cloud  "VPC" {
+
+    rectangle "private subnet" as private {
+        rectangle "App" as app
+    }
+
+    rectangle "public subnet" {
+        rectangle "Bastion Host" as bastion
+    }
+
+}
+
+engineer --> bastion : " Bastion SG (SSH)"
+bastion --> app : " Application SG (Proxy Jump)"
+
+@enduml
