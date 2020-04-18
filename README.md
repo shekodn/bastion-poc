@@ -48,7 +48,8 @@ KEY_NAME=<your-key-pair-name>
 ```
 ./deploy.sh
 ```
-After a couple of minutes you should see 2 IPs. If so, we are golden ;)
+After a couple of minutes you should see 2 IPs. When this happens we are golden
+;)
 
 #### Output
 ```
@@ -89,7 +90,7 @@ Go to your terminal and ssh to your app-host-poc
 ssh app-host-poc
 ```
 
-Voilà. You are inside a machine that is running in a private subnet. Isn't cool? 
+Voilà. You are inside a machine that is running in a private subnet. Isn't cool?
 
 ## Further Considerations
 Remember, this is just a PoC. For example, the Application Instance
