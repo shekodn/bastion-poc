@@ -86,8 +86,8 @@ Host app-host-poc
     ProxyJump bastion-host-poc
 ```
 
-### SSH your way in:
-Go to your terminal and ssh to your app-host-poc
+### SSH'ing your way in
+Go to your terminal and _ssh_ into your app-host-poc
 ```
 ssh app-host-poc
 ```
