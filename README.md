@@ -5,6 +5,16 @@ Deploying a Bastion Host PoC in AWS using CloudFormation.
 
 ![overview](./docs/diagram.png)
 
+The idea of implementing a Bastion Host is being able to reduce the attack
+surface by doing 2 things:
+
+1. Remove the application instances (could also be database instances) or other
+servers that are not meant to be open to the world.
+
+2. Be able to harden one machine (the bastion) and not
+each and every other server in our infrastructure. The ~~more~~ less the
+merrier.
+
 ## Getting Started
 
 ### Prerequisites
