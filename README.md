@@ -1,12 +1,20 @@
-# Bastion Host Proof of Concept
+# Bastion Host Proof of Concept (PoC)
 
 ### TL;DR
-Deploying a Bastion Host PoC in AWS using CloudFormation.
+Deploying a Bastion Host in AWS using CloudFormation.
 
 ![overview](./docs/diagram.png)
 
-The idea of implementing a Bastion Host is being able to reduce the attack
-surface by doing 2 things:
+## Why we need a Bastion?
+
+Although [toil](https://cloud.google.com/blog/products/management-tools/identifying-and-tracking-toil-using-sre-principles)
+is highly discouraged, sometimes we need to _ssh_ into an instance in order to
+do some kind of debugging. As a result, we need to expose that instance to
+the internet and that is _no bueno_. One way to prevent this from happening, is
+to implement a Bastion Host.
+
+The idea of implementing this is being able to reduce the attack surface of our
+infrastructure by doing 2 things:
 
 1. Remove the application instances (could also be database instances) or other
 servers that are not meant to be open to the world.
@@ -14,6 +22,9 @@ servers that are not meant to be open to the world.
 2. Be able to harden one machine (the bastion) and not
 each and every other server in our infrastructure. The ~~more~~ less the
 merrier.
+
+Other benefit that the a Bastion Host can have is logging in order to prevent
+[repudiation](https://searchsecurity.techtarget.com/definition/nonrepudiation).
 
 ## Getting Started
 
@@ -40,7 +51,8 @@ KEY_NAME=<your-key-pair-name>
 
 After a couple of minutes you should see 2 IPs. If so, we are golden ;)
 
-###### If you want to debug or see what happened go to the respective CloudFormation stack in the AWS console.
+*Note: If you want to debug or see what happened go to the respective
+CloudFormation stack in the AWS console.*
 
 ### Config your ssh config file
 
