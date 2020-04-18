@@ -48,8 +48,16 @@ KEY_NAME=<your-key-pair-name>
 ```
 ./deploy.sh
 ```
-
 After a couple of minutes you should see 2 IPs. If so, we are golden ;)
+
+#### Output
+```
+[
+    "http://10.0.0.x",
+    "http://x.x.x.x"
+]
+
+```
 
 *Note: If you want to debug or see what happened go to the respective
 CloudFormation stack in the AWS console.*
