@@ -82,3 +82,21 @@ Host app-host-poc
     IdentityFile ~/.ssh/<your-key-pair-private-key>
     ProxyJump bastion-host-poc
 ```
+
+### SSH your way in:
+Go to your terminal and ssh to your app-host-poc
+```
+ssh app-host-poc
+```
+
+Voilà. You are inside a machine that is running in a private subnet. Isn't cool? 
+
+## Further Considerations
+Remember, this is just a PoC. For example, the Application Instance
+can still send traffic to the whole world (do you really want that?).
+Similarly, the Bastion Instance has yet to be hardened.
+
+Although you probably have a more sophisticated setup, a Bastion Host might be
+the solution and this might be the kickstart of your implementation.
+For you, especially if you have all instances exposed to the world or you want
+to control who can ssh to one specific instance.
