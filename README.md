@@ -25,6 +25,8 @@ less the merrier.
 
 Other benefit that the a Bastion Host can have is logging in order to prevent
 [repudiation](https://searchsecurity.techtarget.com/definition/nonrepudiation).
+This work because every engineer has their own key pair. So you can keep track
+of what Alice and Bob did during their last session.
 
 ## Getting Started
 
@@ -90,14 +92,18 @@ Go to your terminal and ssh to your app-host-poc
 ssh app-host-poc
 ```
 
-Voilà. You are inside a machine that is running in a private subnet. Isn't cool?
+Voilà. You are inside a machine that is running in a private subnet. Isn't it
+cool?
 
 ## Further Considerations
 Remember, this is just a PoC. For example, the Application Instance
 can still send traffic to the whole world (do you really want that?).
 Similarly, the Bastion Instance has yet to be hardened.
 
+Implementing a Bastion can be useful for your current processes, especially if
+you have some instances exposed to the world and / or you want to control
+who can _ssh_ into an specific instance.
+
 Although you probably have a more sophisticated setup, a Bastion Host might be
-the solution and this might be the kickstart of your implementation.
-For you, especially if you have all instances exposed to the world or you want
-to control who can ssh to one specific instance.
+the right solution for you, and this could be the kickstart of your
+implementation.
