@@ -20,8 +20,8 @@ infrastructure by doing 2 things:
 servers that are not meant to be open to the world.
 
 2. Be able to harden one machine (the bastion) and not
-each and every other server in our infrastructure. The ~~more~~ less the
-merrier.
+each and every other server in our infrastructure. So in this case the ~~more~~
+less the merrier.
 
 Other benefit that the a Bastion Host can have is logging in order to prevent
 [repudiation](https://searchsecurity.techtarget.com/definition/nonrepudiation).
